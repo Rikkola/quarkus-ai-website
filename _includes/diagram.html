@@ -1,0 +1,13 @@
+<div class="layer-diagram" role="img" aria-label="Quarkus AI ecosystem layers">
+  {% for layer in site.data.layers %}
+    <div class="layer">
+      <div class="layer-label">{{ layer.name }}</div>
+      <div class="layer-projects">
+        {% assign projects_in_layer = site.data.ecosystem | where: "layer", layer.id %}
+        {% for p in projects_in_layer %}
+          <a href="/ecosystem/{{ p.slug }}/" class="layer-chip">{{ p.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
