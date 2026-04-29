@@ -1,0 +1,55 @@
+- type: workshop
+  source: official
+  title: Quarkus LangChain4j Workshop
+  url: https://quarkus.io/quarkus-workshop-langchain4j/
+  duration: half-day to full-day
+  description: Build an AI-powered application with LangChain4j, RAG, and tool-calling.
+
+- type: workshop
+  source: official
+  title: Quarkus Flow Workshop
+  url: https://docs.quarkiverse.io/quarkus-flow/dev/wk-index.html
+  duration: half-day
+  description: Four labs covering Hello Flow, HTTP/OpenAPI tasks, YAML + events, and agentic workflows.
+
+- type: workshop
+  source: community
+  title: LangChain4j Uphill Workshop
+  url: https://github.com/langchain4j/quarkus-langchain4j-uphill-workshop
+  duration: half-day
+  description: Build a customer-support chatbot with RAG and tool-calling. Hosted under the upstream LangChain4j organisation.
+
+- type: tutorial
+  source: official
+  title: How to build AI-ready applications with Quarkus
+  url: https://developers.redhat.com/articles/2025/04/07/how-build-ai-ready-applications-quarkus
+  duration: ~1 hour
+  description: An overview of the Quarkus AI stack with working examples (Red Hat Developer).
+
+- type: tutorial
+  source: official
+  title: Build an AI-powered document assistant with Quarkus and LangChain4j
+  url: https://developer.ibm.com/tutorials/build-ai-assistant-quarkus-langchain/
+  duration: ~1 hour
+  description: End-to-end document Q&A with RAG (IBM Developer).
+
+- type: tutorial
+  source: community
+  title: Build a Real Java Workflow with Quarkus Flow, Kafka, and Ollama
+  url: https://www.the-main-thread.com/p/quarkus-flow-ollama-kafka-cloudevents-java-workflow
+  duration: ~1 hour
+  description: Event-driven AI workflow with local inference (The Main Thread).
+
+- type: community
+  source: community
+  title: kdubois/quarkus-langchain4j-samples
+  url: https://github.com/kdubois/quarkus-langchain4j-samples
+  duration: varies
+  description: Image generation, RAG, guardrails, local inferencing examples. Verify before using.
+
+- type: community
+  source: community
+  title: arconsis/quarkus-langchain-examples
+  url: https://github.com/arconsis/quarkus-langchain-examples
+  duration: varies
+  description: Conversations, RAG, and agent examples paired with video tutorials. Verify before using.

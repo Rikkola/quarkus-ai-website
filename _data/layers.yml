@@ -1,0 +1,11 @@
+- id: ai-services
+  name: AI Services
+  description: Declarative LLM access, prompting, RAG, tool-calling.
+
+- id: orchestration
+  name: Orchestration
+  description: Multi-step, stateful, event-driven workflows.
+
+- id: protocol-tools
+  name: Protocol & Tools
+  description: Exposing and consuming Model Context Protocol tools.

@@ -1,0 +1,23 @@
+- id: chatbot
+  title: Conversational chatbot
+  description: Stateful chat with conversation memory and optional tool-calling.
+  required_tags: [Tool-calling]
+  optional_tags: []
+
+- id: rag
+  title: Retrieval-augmented Q&A
+  description: Answer questions over your own documents using a vector store.
+  required_tags: [RAG]
+  optional_tags: []
+
+- id: agent
+  title: Multi-step agent
+  description: Agents that plan, call tools, and recover from failures across multiple steps.
+  required_tags: [Agents]
+  optional_tags: [Workflows, MCP]
+
+- id: mcp-tools
+  title: MCP-powered tools
+  description: Expose Java capabilities as tools to Claude Desktop, Copilot, or any MCP client — or consume MCP servers from your AI service.
+  required_tags: [MCP]
+  optional_tags: []

@@ -1,0 +1,11 @@
+- id: langchain4j-mcp
+  title: Use MCP server tools from a LangChain4j AI service
+  description: Connect a LangChain4j @RegisterAiService to a Quarkus MCP Server's tools — declared once, exposed and consumed via the protocol.
+  projects: [langchain4j, mcp-server]
+  snippet_id: combo-langchain4j-mcp
+
+- id: flow-langchain4j
+  title: Orchestrate multi-step AI tasks with Flow + LangChain4j
+  description: Use Quarkus Flow to sequence LangChain4j calls, branch on model output, and pause for human approval.
+  projects: [flow, langchain4j]
+  snippet_id: combo-flow-langchain4j
