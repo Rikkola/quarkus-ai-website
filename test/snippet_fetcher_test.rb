@@ -18,6 +18,16 @@ class SnippetFetcherTest < Minitest::Test
     assert_equal "line1\nline2\n", SnippetFetcher.extract_lines(content, nil)
   end
 
+  def test_extract_lines_with_single_line_range
+    content = "line1\nline2\nline3\n"
+    assert_equal "line2\n", SnippetFetcher.extract_lines(content, '2')
+  end
+
+  def test_extract_lines_raises_on_reversed_range
+    content = "line1\nline2\nline3\n"
+    assert_raises(ArgumentError) { SnippetFetcher.extract_lines(content, '3-1') }
+  end
+
   def test_cache_path_for_uses_id_and_extension
     snippet = { 'id' => 'foo', 'path' => 'src/Main.java' }
     assert_equal 'cache/foo.java', SnippetFetcher.cache_path_for(snippet, 'cache')

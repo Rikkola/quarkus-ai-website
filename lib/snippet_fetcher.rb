@@ -10,7 +10,10 @@ module SnippetFetcher
 
   def self.extract_lines(content, range)
     return content if range.nil? || range.empty?
-    first, last = range.split('-').map(&:to_i)
+    parts = range.split('-').map(&:to_i)
+    first = parts[0]
+    last  = parts[1] || first
+    raise ArgumentError, "Reversed line range '#{range}'" if last < first
     content.lines[(first - 1)..(last - 1)].join
   end
 
