@@ -1,0 +1,109 @@
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $gutter;
+}
+
+.component {
+  padding: 3.5rem $gutter;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.full-width-bg {
+  width: 100%;
+
+  &.dark { background: var(--bg-dark); color: $white; }
+  &.alt  { background: var(--bg-alt); }
+
+  &.dark h2, &.dark h3 { color: $white; }
+}
+
+.title-band {
+  background: var(--bg-dark);
+  color: $white;
+  padding: 3rem $gutter 2.5rem;
+
+  h1 { color: $white; margin: 0 0 0.75rem; }
+  p  { color: rgba(255,255,255,0.8); max-width: 700px; }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: $bp-tablet) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: $bp-mobile) { grid-template-columns: 1fr; }
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: $bp-mobile) { grid-template-columns: 1fr; }
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+
+  &.btn-primary {
+    background: $quarkus-blue;
+    color: $white;
+    border: 2px solid $quarkus-blue;
+    &:hover { background: $quarkus-blue-hover; border-color: $quarkus-blue-hover; text-decoration: none; }
+  }
+
+  &.btn-outline {
+    border: 2px solid $quarkus-blue;
+    color: $quarkus-blue;
+    background: transparent;
+    &:hover { background: $quarkus-blue; color: $white; text-decoration: none; }
+  }
+
+  &.btn-outline-white {
+    border: 2px solid $white;
+    color: $white;
+    background: transparent;
+    &:hover { background: $white; color: $quarkus-dark-bg; text-decoration: none; }
+  }
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+
+  &.badge-stable       { background: $quarkus-green; color: $white; }
+  &.badge-preview      { background: $quarkus-orange; color: $white; }
+  &.badge-experimental { background: $text-muted; color: $white; }
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.page-content {
+  padding: 2.5rem $gutter 3rem;
+  max-width: 860px;
+  margin: 0 auto;
+}

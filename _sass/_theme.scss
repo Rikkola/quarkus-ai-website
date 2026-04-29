@@ -1,0 +1,31 @@
+:root {
+  --bg:           #{$white};
+  --bg-alt:       #{$quarkus-light-blue};
+  --bg-dark:      #{$quarkus-dark-bg};
+  --text:         #{$text-dark};
+  --text-muted:   #{$text-muted};
+  --accent:       #{$quarkus-blue};
+  --accent-hover: #{$quarkus-blue-hover};
+  --link:         #{$quarkus-link};
+  --border:       #{$border-color};
+  --card-bg:      #{$white};
+  --code-bg:      #f4f7fb;
+  --nav-bg:       #{$quarkus-dark-bg};
+  --nav-text:     #{$white};
+}
+
+[data-theme="dark"] {
+  --bg:           #{$quarkus-dark-bg};
+  --bg-alt:       #{$quarkus-dark-bg-2};
+  --bg-dark:      #060d14;
+  --text:         #e8f0f9;
+  --text-muted:   #8aabcc;
+  --accent:       #{$quarkus-blue};
+  --accent-hover: #6aaef0;
+  --link:         #6aaef0;
+  --border:       #1e3250;
+  --card-bg:      #{$quarkus-dark-bg-2};
+  --code-bg:      #0a1828;
+  --nav-bg:       #{$quarkus-dark-bg};
+  --nav-text:     #{$white};
+}

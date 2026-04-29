@@ -1,0 +1,71 @@
+.site-header {
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.nav-inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $gutter;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 60px;
+}
+
+.site-logo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+
+  span { color: $quarkus-blue; }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
+
+  a {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+
+    &:hover {
+      color: $white;
+      border-bottom-color: $quarkus-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: $white;
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+  transition: border-color 0.15s;
+  &:hover { border-color: $white; }
+}
+
+@media (max-width: $bp-mobile) {
+  .site-nav { display: none; }
+}
