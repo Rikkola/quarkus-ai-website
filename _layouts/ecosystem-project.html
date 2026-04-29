@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div class="title-band">
+  <div class="container">
+    <p style="margin:0 0 0.5rem; font-size:0.85rem; opacity:0.7;">
+      <a href="{{ '/#ecosystem' | relative_url }}" style="color:inherit;">← Ecosystem</a>
+    </p>
+    <h1>{{ page.name }}</h1>
+    <p>{{ page.summary }}</p>
+    <div style="display:flex; gap:0.75rem; align-items:center; margin-top:0.75rem; flex-wrap:wrap;">
+      <span class="badge badge-{{ page.maturity }}">{{ page.maturity }}</span>
+      {% for tag in page.tags %}
+        <span class="tag" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.85);">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="page-content">
+  {{ content }}
+
+  {% if page.pairs_with %}
+    <h2>How it fits with other projects</h2>
+    <div class="grid-2">
+      {% for slug in page.pairs_with %}
+        {% assign other = site.data.ecosystem | where: "slug", slug | first %}
+        {% if other %}
+          <a href="/ecosystem/{{ other.slug }}/" class="card" style="text-decoration:none; color:inherit; display:block;">
+            <h3>{{ other.name }}</h3>
+            <p>{{ other.summary }}</p>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
