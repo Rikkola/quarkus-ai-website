@@ -1,3 +1,4 @@
+# Illustrative — see Quarkus Flow docs for the current Java + DSL integration API.
 # src/main/resources/research-and-summarize.yaml
 document: { dsl: "1.0.0", namespace: "demo", name: "research", version: "1.0.0" }
 do:
