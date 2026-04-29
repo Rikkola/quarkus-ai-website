@@ -1,0 +1,35 @@
+- id: hero-register-ai-service
+  source: upstream
+  repo: quarkiverse/quarkus-langchain4j
+  path: samples/email-a-poem/src/main/java/io/quarkiverse/langchain4j/sample/MyAiService.java
+  sha: aed39b26ea9ed533fc1ba0089a00ab60c26c7471
+  lines: 7-24
+  language: java
+
+- id: project-langchain4j-quickstart
+  source: upstream
+  repo: quarkiverse/quarkus-langchain4j
+  path: samples/email-a-poem/src/main/java/io/quarkiverse/langchain4j/sample/MyAiService.java
+  sha: aed39b26ea9ed533fc1ba0089a00ab60c26c7471
+  lines: 7-24
+  language: java
+
+- id: project-mcp-server-quickstart
+  source: upstream
+  repo: quarkiverse/quarkus-mcp-server
+  path: samples/weather/src/main/java/org/acme/Weather.java
+  sha: 1484c842bd151892ea81928d0f2b4c21b326a05c
+  lines: 18-26
+  language: java
+
+- id: combo-langchain4j-mcp
+  source: local
+  path: _includes/snippets/local/combo-langchain4j-mcp.java
+  language: java
+  caption: "Use a local MCP server's tools from a LangChain4j AI service"
+
+- id: combo-flow-langchain4j
+  source: local
+  path: _includes/snippets/local/combo-flow-langchain4j.java
+  language: java
+  caption: "Orchestrate two LangChain4j calls in a Quarkus Flow workflow"

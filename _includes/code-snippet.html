@@ -1,0 +1,28 @@
+{%- assign snippet = site.data.snippets | where: "id", include.id | first -%}
+{%- if snippet -%}
+  {%- if snippet.source == "local" -%}
+    {%- assign include_path = snippet.path | remove_first: "_includes/" -%}
+  {%- else -%}
+    {%- assign ext = snippet.path | split: "." | last -%}
+    {%- assign include_path = "snippets/cache/" | append: snippet.id | append: "." | append: ext -%}
+  {%- endif -%}
+  <div class="code-block">
+    {%- if snippet.caption %}<p class="code-caption">{{ snippet.caption }}</p>{% endif -%}
+{% capture _md %}
+```{{ snippet.language }}
+{% include {{ include_path }} %}
+```
+{% endcapture -%}
+{{ _md | markdownify }}
+    {%- if snippet.source == "upstream" -%}
+      {%- assign source_link = "https://github.com/" | append: snippet.repo | append: "/blob/" | append: snippet.sha | append: "/" | append: snippet.path -%}
+      {%- if snippet.lines -%}
+        {%- assign line_anchor = snippet.lines | replace: "-", "-L" -%}
+        {%- assign source_link = source_link | append: "#L" | append: line_anchor -%}
+      {%- endif -%}
+      <a class="code-source-link" href="{{ source_link }}" target="_blank" rel="noopener">View source on GitHub →</a>
+    {%- endif -%}
+  </div>
+{%- else -%}
+  <p style="color:red;">Snippet "{{ include.id }}" not found in _data/snippets.yml</p>
+{%- endif -%}
