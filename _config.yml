@@ -1,0 +1,43 @@
+title: Quarkus AI
+description: Build production AI applications in Java, with the Quarkus you already know.
+baseurl: ""
+url: ""
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+collections:
+  ecosystem:
+    output: true
+    permalink: /ecosystem/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "ecosystem"
+    values:
+      layout: "ecosystem-project"
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - README.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - CLAUDE.md
+  - LICENSE
+  - lib/
+  - test/
+  - vendor/
+  - plan.md
+  - node_modules/
