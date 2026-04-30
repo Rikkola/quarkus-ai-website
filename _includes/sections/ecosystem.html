@@ -16,7 +16,7 @@
           {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
         </div>
         <div style="margin-top:1rem; display:flex; gap:0.6rem; flex-wrap:wrap;">
-          <a href="/ecosystem/{{ project.slug }}/" class="btn btn-outline" style="font-size:0.85rem; padding:0.4rem 1rem;">Details</a>
+          <a href="{{ '/ecosystem/' | append: project.slug | append: '/' | relative_url }}" class="btn btn-outline" style="font-size:0.85rem; padding:0.4rem 1rem;">Details</a>
           <a href="{{ project.repo }}" class="btn btn-outline" style="font-size:0.85rem; padding:0.4rem 1rem;" target="_blank" rel="noopener">GitHub</a>
           <a href="{{ project.docs }}" class="btn btn-outline" style="font-size:0.85rem; padding:0.4rem 1rem;" target="_blank" rel="noopener">Docs</a>
           {% if project.extension_url %}

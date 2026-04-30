@@ -18,7 +18,7 @@
               {%- if project.tags contains tag -%}{%- assign matched = true -%}{%- endif -%}
             {%- endfor -%}
             {%- if matched -%}
-              {{ sep }}<a href="/ecosystem/{{ project.slug }}/">{{ project.name }}</a>
+              {{ sep }}<a href="{{ '/ecosystem/' | append: project.slug | append: '/' | relative_url }}">{{ project.name }}</a>
               {%- assign sep = ", " -%}
             {%- endif -%}
           {%- endfor -%}
@@ -36,7 +36,7 @@
                   {%- if project.tags contains tag -%}{%- assign matched_opt = true -%}{%- endif -%}
                 {%- endfor -%}
                 {%- if matched_opt and matched_req == false -%}
-                  {{ sep2 }}<a href="/ecosystem/{{ project.slug }}/">{{ project.name }}</a>
+                  {{ sep2 }}<a href="{{ '/ecosystem/' | append: project.slug | append: '/' | relative_url }}">{{ project.name }}</a>
                   {%- assign sep2 = ", " -%}
                 {%- endif -%}
               {%- endfor -%}

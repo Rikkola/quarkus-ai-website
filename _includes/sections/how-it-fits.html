@@ -16,7 +16,7 @@
           {{ combo.description }}
           {% assign sep = "" %}
           <span style="font-size:0.85rem;">Uses:
-            {% for slug in combo.projects %}{% assign p = site.data.ecosystem | where: "slug", slug | first %}{{ sep }}<a href="/ecosystem/{{ p.slug }}/">{{ p.name }}</a>{% assign sep = ", " %}{% endfor %}
+            {% for slug in combo.projects %}{% assign p = site.data.ecosystem | where: "slug", slug | first %}{{ sep }}<a href="{{ '/ecosystem/' | append: p.slug | append: '/' | relative_url }}">{{ p.name }}</a>{% assign sep = ", " %}{% endfor %}
           </span>
         </p>
         {% include code-snippet.html id=combo.snippet_id %}

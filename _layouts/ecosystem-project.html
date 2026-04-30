@@ -26,7 +26,7 @@ layout: default
       {% for slug in page.pairs_with %}
         {% assign other = site.data.ecosystem | where: "slug", slug | first %}
         {% if other %}
-          <a href="/ecosystem/{{ other.slug }}/" class="card" style="text-decoration:none; color:inherit; display:block;">
+          <a href="{{ '/ecosystem/' | append: other.slug | append: '/' | relative_url }}" class="card" style="text-decoration:none; color:inherit; display:block;">
             <h3>{{ other.name }}</h3>
             <p>{{ other.summary }}</p>
           </a>

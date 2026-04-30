@@ -5,7 +5,7 @@
       <div class="layer-projects">
         {% assign projects_in_layer = site.data.ecosystem | where: "layer", layer.id %}
         {% for p in projects_in_layer %}
-          <a href="/ecosystem/{{ p.slug }}/" class="layer-chip">{{ p.name }}</a>
+          <a href="{{ '/ecosystem/' | append: p.slug | append: '/' | relative_url }}" class="layer-chip">{{ p.name }}</a>
         {% endfor %}
       </div>
     </div>
