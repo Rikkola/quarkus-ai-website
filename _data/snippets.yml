@@ -1,10 +1,29 @@
-- id: hero-register-ai-service
+- id: hero-rest-resource
+  source: upstream
+  repo: quarkiverse/quarkus-langchain4j
+  path: samples/email-a-poem/src/main/java/io/quarkiverse/langchain4j/sample/EmailMeAPoemResource.java
+  sha: aed39b26ea9ed533fc1ba0089a00ab60c26c7471
+  lines: 6-20
+  language: java
+  caption: "1 — REST endpoint: an injected AI service powers a plain JAX-RS resource."
+
+- id: hero-ai-service
   source: upstream
   repo: quarkiverse/quarkus-langchain4j
   path: samples/email-a-poem/src/main/java/io/quarkiverse/langchain4j/sample/MyAiService.java
   sha: aed39b26ea9ed533fc1ba0089a00ab60c26c7471
   lines: 7-24
   language: java
+  caption: "2 — AI service: a Java interface, declarative prompts, and tools the model can call."
+
+- id: hero-tool
+  source: upstream
+  repo: quarkiverse/quarkus-langchain4j
+  path: samples/email-a-poem/src/main/java/io/quarkiverse/langchain4j/sample/EmailService.java
+  sha: aed39b26ea9ed533fc1ba0089a00ab60c26c7471
+  lines: 11-23
+  language: java
+  caption: "3 — Tool: a regular CDI bean exposed to the model with @Tool."
 
 - id: project-langchain4j-quickstart
   source: upstream
