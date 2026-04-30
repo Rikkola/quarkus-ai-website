@@ -65,6 +65,16 @@ To add a new project: append to `ecosystem.yml`, create `_ecosystem/<slug>.md`, 
 
 Append to `_data/learn.yml` with `type: workshop|tutorial|community`.
 
+## Claude Code skills for the Quarkus AI ecosystem
+
+These apply when developing the **underlying Quarkus extensions and AI applications**, not this Jekyll site. Mention by name to invoke explicitly, or rely on their auto-trigger keywords:
+
+- `quarkus-flow-dev` — writing Quarkus Flow workflows: `Flow` subclasses, FuncDSL tasks (function/agent/emit/listen/switchWhen/forEach/http/openapi), YAML workflow definitions, debugging workflow issues.
+- `quarkus-flow-testing` — writing or debugging tests for Quarkus Flow workflows (`@QuarkusTest`, REST integration tests, mocking AI agents).
+- `quarkus-observability` — configuring logging, tracing, metrics, OpenTelemetry, MDC, structured logging in Quarkus apps.
+
+For this repo (the Jekyll site) none of these apply — site work is just Liquid, SCSS, YAML, and Markdown.
+
 ## Run locally
 
     bundle install
