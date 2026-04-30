@@ -4,7 +4,7 @@ name: Quarkus LangChain4j
 summary: Declarative AI services, RAG, tool-calling, and MCP client integration built on the LangChain4j library.
 maturity: preview
 tags: [RAG, Agents, MCP, Tool-calling]
-pairs_with: [flow, mcp-server, mcp-servers]
+pairs_with: [flow, mcp-server, mcp-servers, docling]
 ---
 
 ## Summary

@@ -36,3 +36,13 @@
   maturity: preview
   repo: https://github.com/quarkiverse/quarkus-mcp-servers
   docs: https://github.com/quarkiverse/quarkus-mcp-servers
+
+- slug: docling
+  name: Quarkus Docling
+  summary: Document processing for AI — parse PDFs, DOCX, HTML, and images (with OCR) into structured text suitable for RAG ingestion.
+  layer: ai-services
+  tags: [RAG, Documents]
+  maturity: experimental
+  repo: https://github.com/quarkiverse/quarkus-docling
+  docs: https://docs.quarkiverse.io/quarkus-docling/dev/index.html
+  extension_url: https://quarkus.io/extensions/?categories=AI&search-regex=Docling
