@@ -4,7 +4,7 @@ Guidance for future Claude Code sessions working in this repo.
 
 ## What this is
 
-A Jekyll static site at `quarkus-ai-site` (or your fork). It is a discovery and onboarding hub for Java developers using the Quarkus AI ecosystem — not a coordination hub for the Quarkus AI Initiative (that lives at <https://github.com/mdproctor/quarkus-ai>).
+A Jekyll static site published at <https://rikkola.github.io/quarkus-ai-website/> (repo: `Rikkola/quarkus-ai-website`). It is a discovery and onboarding hub for Java developers using the Quarkus AI ecosystem — not a coordination hub for the Quarkus AI Initiative (that lives at <https://github.com/mdproctor/quarkus-ai>).
 
 ## Tech stack
 
@@ -81,7 +81,7 @@ For this repo (the Jekyll site) none of these apply — site work is just Liquid
     bundle exec rake snippets:fetch
     bundle exec jekyll serve --livereload
 
-Open <http://localhost:4000>.
+Open <http://localhost:4000/quarkus-ai-website/> — the trailing path is required because `_config.yml` sets `baseurl: /quarkus-ai-website` for the GitHub Pages deploy. Hitting `localhost:4000` without the prefix returns a 404.
 
 ## Run tests
 
