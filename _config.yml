@@ -1,7 +1,7 @@
 title: Quarkus AI
 description: Build production AI applications in Java, with the Quarkus you already know.
-baseurl: ""
-url: ""
+baseurl: "/quarkus-ai-website"
+url: "https://rikkola.github.io"
 
 markdown: kramdown
 highlighter: rouge
