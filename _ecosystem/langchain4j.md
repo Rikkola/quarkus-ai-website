@@ -21,6 +21,7 @@ The extension covers the full range of LangChain4j capabilities: retrieval-augme
 | Repository | [quarkiverse/quarkus-langchain4j](https://github.com/quarkiverse/quarkus-langchain4j) |
 | Documentation | [docs.quarkiverse.io/quarkus-langchain4j/dev](https://docs.quarkiverse.io/quarkus-langchain4j/dev/) |
 | Upstream library | [langchain4j/langchain4j](https://github.com/langchain4j/langchain4j) |
+| Extensions | [Browse on quarkus.io →](https://quarkus.io/extensions/?categories=AI&search-regex=LangChain4j) |
 
 ## What you can build with it
 

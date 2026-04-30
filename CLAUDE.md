@@ -44,6 +44,8 @@ To add a new project: append to `ecosystem.yml`, create `_ecosystem/<slug>.md`, 
 ```bash
 # 1. Add entry to _data/ecosystem.yml
 # 2. Create _ecosystem/<slug>.md with frontmatter (slug, name, summary, maturity, tags, pairs_with) and body
+#    If the project has Quarkus extensions in the catalog, set extension_url in _data/ecosystem.yml
+#    using the pattern https://quarkus.io/extensions/?categories=AI&search-regex=<FamilyName>
 # 3. Optional: add quickstart snippet entry to _data/snippets.yml
 # 4. Run: bundle exec rake snippets:fetch
 # 5. Run: bundle exec jekyll serve and verify

@@ -6,6 +6,7 @@
   maturity: preview
   repo: https://github.com/quarkiverse/quarkus-langchain4j
   docs: https://docs.quarkiverse.io/quarkus-langchain4j/dev/
+  extension_url: https://quarkus.io/extensions/?categories=AI&search-regex=LangChain4j
 
 - slug: flow
   name: Quarkus Flow
@@ -15,6 +16,7 @@
   maturity: preview
   repo: https://github.com/quarkiverse/quarkus-flow
   docs: https://docs.quarkiverse.io/quarkus-flow/dev/
+  extension_url: https://quarkus.io/extensions/?categories=AI&search-regex=Flow
 
 - slug: mcp-server
   name: Quarkus MCP Server
@@ -24,6 +26,7 @@
   maturity: preview
   repo: https://github.com/quarkiverse/quarkus-mcp-server
   docs: https://docs.quarkiverse.io/quarkus-mcp-server/dev/index.html
+  extension_url: https://quarkus.io/extensions/?categories=AI&search-regex=MCP
 
 - slug: mcp-servers
   name: Quarkus MCP Servers

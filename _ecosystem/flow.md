@@ -21,6 +21,7 @@ For AI workloads, Flow handles the orchestration layer: sequencing LangChain4j c
 | Repository | [quarkiverse/quarkus-flow](https://github.com/quarkiverse/quarkus-flow) |
 | Documentation | [docs.quarkiverse.io/quarkus-flow/dev](https://docs.quarkiverse.io/quarkus-flow/dev/) |
 | Specification | [CNCF Serverless Workflow](https://serverlessworkflow.io/) |
+| Extensions | [Browse on quarkus.io →](https://quarkus.io/extensions/?categories=AI&search-regex=Flow) |
 
 ## What you can build with it
 

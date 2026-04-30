@@ -22,6 +22,7 @@ An MCP server exposes tools, resources, and prompts to MCP-compatible clients: C
 | Maturity | Preview |
 | Repository | [quarkiverse/quarkus-mcp-server](https://github.com/quarkiverse/quarkus-mcp-server) |
 | Documentation | [docs.quarkiverse.io/quarkus-mcp-server/dev](https://docs.quarkiverse.io/quarkus-mcp-server/dev/index.html) |
+| Extensions | [Browse on quarkus.io →](https://quarkus.io/extensions/?categories=AI&search-regex=MCP) |
 
 ## What you can build with it
 
