@@ -46,3 +46,13 @@
   repo: https://github.com/quarkiverse/quarkus-docling
   docs: https://docs.quarkiverse.io/quarkus-docling/dev/index.html
   extension_url: https://quarkus.io/extensions/?categories=AI&search-regex=Docling
+
+- slug: amazon-services
+  name: Quarkus Amazon Services
+  summary: AWS integrations for Quarkus, including AI-shaped extensions for Bedrock (foundation models), Rekognition (vision), and Textract (OCR).
+  layer: ai-services
+  tags: [Models, Documents]
+  maturity: stable
+  repo: https://github.com/quarkiverse/quarkus-amazon-services
+  docs: https://docs.quarkiverse.io/quarkus-amazon-services/dev/index.html
+  extension_url: https://quarkus.io/extensions/?categories=AI&search-regex=Amazon
