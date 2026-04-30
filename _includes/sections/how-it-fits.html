@@ -1,0 +1,26 @@
+<section id="how-it-fits" class="full-width-bg alt">
+  <div class="component">
+    <h2 style="margin-top:0;">How they fit together</h2>
+    <p style="color:var(--text-muted); max-width:680px;">
+      The ecosystem is organised into layers. Most apps use one or two; some compose
+      across all three.
+    </p>
+
+    {% include diagram.html %}
+
+    <h3 style="margin-top:2.5rem;">Featured combinations</h3>
+    {% for combo in site.data.combinations %}
+      <div style="margin-top:1.5rem;">
+        <h4 style="margin-bottom:0.4rem;">{{ combo.title }}</h4>
+        <p style="color:var(--text-muted); margin-bottom:0.5rem;">
+          {{ combo.description }}
+          {% assign sep = "" %}
+          <span style="font-size:0.85rem;">Uses:
+            {% for slug in combo.projects %}{% assign p = site.data.ecosystem | where: "slug", slug | first %}{{ sep }}<a href="/ecosystem/{{ p.slug }}/">{{ p.name }}</a>{% assign sep = ", " %}{% endfor %}
+          </span>
+        </p>
+        {% include code-snippet.html id=combo.snippet_id %}
+      </div>
+    {% endfor %}
+  </div>
+</section>

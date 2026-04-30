@@ -1,0 +1,46 @@
+<section id="learn" class="component">
+  <h2 style="margin-top:0;">Learn</h2>
+
+  <h3>Workshops</h3>
+  <p style="color:var(--text-muted);">Multi-step learning paths. Plan an afternoon to a full day per workshop.</p>
+  <div class="grid-2">
+    {% assign workshops = site.data.learn | where: "type", "workshop" %}
+    {% for item in workshops %}
+      <div class="learn-card">
+        <div class="learn-card-label">{% if item.source == "official" %}Official{% else %}Community{% endif %}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.4rem;">Duration: {{ item.duration }}</p>
+        <a href="{{ item.url }}" target="_blank" rel="noopener">Open →</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <h3 style="margin-top:2.5rem;">Tutorials</h3>
+  <p style="color:var(--text-muted);">Single articles. About an hour each.</p>
+  <div class="grid-2">
+    {% assign tutorials = site.data.learn | where: "type", "tutorial" %}
+    {% for item in tutorials %}
+      <div class="learn-card">
+        <div class="learn-card-label">{% if item.source == "official" %}Official{% else %}Community{% endif %}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        <a href="{{ item.url }}" target="_blank" rel="noopener">Open →</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <h3 style="margin-top:2.5rem;">Community examples</h3>
+  <p style="color:var(--text-muted);">Third-party repositories. Useful, but not maintained by this site — verify the repository is active before adopting.</p>
+  <div class="grid-2">
+    {% assign community = site.data.learn | where: "type", "community" %}
+    {% for item in community %}
+      <div class="learn-card">
+        <div class="learn-card-label">Community</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        <a href="{{ item.url }}" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>

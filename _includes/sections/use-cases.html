@@ -1,0 +1,49 @@
+<section id="use-cases" class="component">
+  <h2 style="margin-top:0;">What you can build</h2>
+  <p style="color:var(--text-muted); max-width:680px;">
+    Common use cases and which projects fit. Tags reflect the data, not editorial taste —
+    new projects are recommended automatically when their tags match.
+  </p>
+  <div class="grid-2" style="margin-top:1.5rem;">
+    {% for u in site.data.usecases %}
+      <article class="usecase-card">
+        <h3>{{ u.title }}</h3>
+        <p>{{ u.description }}</p>
+        <div class="usecase-projects">
+          <strong>Recommended:</strong>
+          {%- assign sep = "" -%}
+          {%- for project in site.data.ecosystem -%}
+            {%- assign matched = false -%}
+            {%- for tag in u.required_tags -%}
+              {%- if project.tags contains tag -%}{%- assign matched = true -%}{%- endif -%}
+            {%- endfor -%}
+            {%- if matched -%}
+              {{ sep }}<a href="/ecosystem/{{ project.slug }}/">{{ project.name }}</a>
+              {%- assign sep = ", " -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- if u.optional_tags and u.optional_tags.size > 0 -%}
+            <br><span style="font-size:0.78rem;">
+              <em>Optionally:</em>
+              {%- assign sep2 = "" -%}
+              {%- for project in site.data.ecosystem -%}
+                {%- assign matched_req = false -%}
+                {%- for tag in u.required_tags -%}
+                  {%- if project.tags contains tag -%}{%- assign matched_req = true -%}{%- endif -%}
+                {%- endfor -%}
+                {%- assign matched_opt = false -%}
+                {%- for tag in u.optional_tags -%}
+                  {%- if project.tags contains tag -%}{%- assign matched_opt = true -%}{%- endif -%}
+                {%- endfor -%}
+                {%- if matched_opt and matched_req == false -%}
+                  {{ sep2 }}<a href="/ecosystem/{{ project.slug }}/">{{ project.name }}</a>
+                  {%- assign sep2 = ", " -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </span>
+          {%- endif -%}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
